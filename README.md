@@ -1,1 +1,1 @@
-# node-blog
+# node-blog by Net Ninja

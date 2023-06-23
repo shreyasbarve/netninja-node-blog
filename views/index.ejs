@@ -1,0 +1,35 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Shreyas Barve</h1>
+  <p class="author__body">Web Developer and Software Engineer</p>
+</div>
+
+<img
+  src="/img/hero-image.webp"
+  alt="person looking out of the window"
+  class="hero-img"
+  width="981"
+  height="520"
+/>
+
+<section class="articles">
+  <h2 class="article__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <span class="article-list__date"
+          ><%= post.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextPage !== null) { %>
+  <a href="/?page=<%= nextPage %>" class="pagination">&lt; Older Posts</a>
+  <% } %>
+</section>
+
+<!-- resume from video 6 -->
